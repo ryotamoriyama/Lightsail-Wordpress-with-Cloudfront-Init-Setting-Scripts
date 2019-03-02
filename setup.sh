@@ -21,4 +21,4 @@ sed -i -e 's|^#LoadModule expires_module modules/mod_expires.so|LoadModule expir
 sed -i -e 's|AllowOverride None|AllowOverride All|' /opt/bitnami/apps/wordpress/conf/httpd-app.conf
 
 #expires の設定
-cat /opt/bitnami/apps/master/lib/mod_expires.txt >> /opt/bitnami/apps/wordpress/conf/httpd-app.conf
+cat /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/mod_expires.txt >> /opt/bitnami/apps/wordpress/conf/httpd-app.conf
