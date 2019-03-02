@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#phpMyAdmin削除
+rm -Rf /opt/bitnami/apps/phpmyadmin
+
 #bitnamiロゴ削除
 sudo /opt/bitnami/apps/wordpress/bnconfig --disable_banner 1
 
@@ -22,3 +25,6 @@ sed -i -e 's|AllowOverride None|AllowOverride All|' /opt/bitnami/apps/wordpress/
 
 #expires の設定
 cat /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/mod_expires.txt >> /opt/bitnami/apps/wordpress/conf/httpd-app.conf
+
+#bitnami起動
+sudo /opt/bitnami/ctlscript.sh start
