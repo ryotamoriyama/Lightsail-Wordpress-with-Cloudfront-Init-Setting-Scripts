@@ -30,7 +30,7 @@ cat /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/l
 sudo /opt/bitnami/ctlscript.sh start
 
 #wordpress設定
-sudo bash /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/wordpress.sh ${1} ${4} ${5}
+sudo bash /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/wordpress.sh ${2} ${4} ${5}
 
 sudo apt install -y awscli
 sudo apt install -y expect
