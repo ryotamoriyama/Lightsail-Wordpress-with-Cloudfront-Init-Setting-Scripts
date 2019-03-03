@@ -31,7 +31,7 @@ sudo chown root:root /opt/bitnami/apache2/conf/server*
 sudo chmod 600 /opt/bitnami/apache2/conf/server*
 
 #証明書更新用スクリプトの作成
-sudo cp /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/renew-certificate.sh /etc/lego/renew-certificate.sh
+sudo cp -f /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/renew-certificate.sh /etc/lego/renew-certificate.sh
 sudo sed -i -e "s|{replace-email}|${3}|" /etc/lego/renew-certificate.sh
 sudo sed -i -e "s|{replace-domains}|${1}|" /etc/lego/renew-certificate.sh
 
