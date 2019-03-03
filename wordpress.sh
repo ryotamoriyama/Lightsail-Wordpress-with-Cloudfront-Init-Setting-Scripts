@@ -17,7 +17,7 @@ cd /opt/bitnami/apps/wordpress/htdocs
 wp core update --allow-root
 
 #プラグイン削除
-wp plugin delete $(wp plugin list --status=inactive --field=name)
+wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --allow-root)
 
 #テーマ削除
-wp theme delete $(wp theme list --status=inactive --field=name)
+wp theme delete --allow-root $(wp theme list --status=inactive --field=name --allow-root)
