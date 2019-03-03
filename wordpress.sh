@@ -28,8 +28,17 @@ wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --
 #テーマ削除
 wp theme delete --allow-root $(wp theme list --status=inactive --field=name --allow-root)
 
+#ログインユーザー名変更
+if [ -n "$4" ]; then
+wp db query "UPDATE wp_users SET user_login = ${4} WHERE ID = 1" --allow-root
+fi
+
 #ログインパスワード変更
+if [ -n "$5" ]; then
+wp user update 1 --user_pass=${4} --allow-root
+else
 wp user update 1 --user_pass=passwd --allow-root
+fi
 
 #タイムゾーン変更
 wp option update timezone_string 'Asia/Tokyo' --allow-root
