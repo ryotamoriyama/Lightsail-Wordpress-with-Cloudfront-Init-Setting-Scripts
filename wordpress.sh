@@ -13,6 +13,9 @@ sed -i -e "101s|^|\nif (isset(\$_SERVER['HTTP_X_FORWARDED_PROTO']) \&\& \$_SERVE
 #WP CLI
 cd /opt/bitnami/apps/wordpress/htdocs
 
+#日本語ファイルインストール
+wp language core install ja --allow-root
+
 #WordPressを最新版にアップデート
 wp core update --locale=ja --allow-root
 
@@ -24,3 +27,9 @@ wp theme delete --allow-root $(wp theme list --status=inactive --field=name --al
 
 #ログインパスワード変更
 wp user update 1 --user_pass=passwd --allow-root
+
+#タイムゾーン変更
+wp option update timezone_string 'Asia/Tokyo'
+
+#言語設定
+wp option update WPLANG 'ja'

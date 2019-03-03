@@ -1,8 +1,5 @@
 #!/bin/sh
 
-sudo apt install -y awscli
-sudo apt install -y expect
-
 #phpMyAdmin削除
 rm -Rf /opt/bitnami/apps/phpmyadmin
 
@@ -34,3 +31,6 @@ sudo /opt/bitnami/ctlscript.sh start
 
 #wordpress設定
 sudo bash /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/wordpress.sh ${1}
+
+sudo apt install -y awscli
+sudo apt install -y expect
