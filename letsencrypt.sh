@@ -39,9 +39,8 @@ sudo sed -i -e "s|{replace-email}|${3}|" /etc/lego/renew-certificate.sh
 sudo sed -i -e "s|{replace-domains}|${2}|" /etc/lego/renew-certificate.sh
 
 #crontab登録
-cron_file=/var/spool/cron/crontabs/root
-[ -f ${cron_file} ] && touch ${cron_file}
-sudo echo '0 0 1 * * /etc/lego/renew-certificate.sh 2> /dev/null' >> "${cron_file}"
+sudo rm -Rf /var/spool/cron/crontabs/root
+sudo cp -f /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/crontab /var/spool/cron/crontabs/root
 
 #bitnami起動
 sudo /opt/bitnami/ctlscript.sh start

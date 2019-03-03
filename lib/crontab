@@ -1,0 +1,1 @@
+0 0 1 * * /etc/lego/renew-certificate.sh 2> /dev/null
