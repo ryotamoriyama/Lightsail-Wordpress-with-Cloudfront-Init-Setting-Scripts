@@ -22,10 +22,6 @@ tar xf "/tmp/lego_v${version}_linux_amd64.tar.gz"
 
 sudo mv lego /usr/local/bin/lego
 
-echo ${2}
-
-echo ${1}
-
 #Apacheにインストール
 sudo lego --email="${2}" --domains="${1}" --path="/etc/lego" --tls run
 
