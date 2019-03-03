@@ -1,7 +1,7 @@
 #!/bin/sh
 
-sudo apt install awscli
-sudo apt install expect
+sudo apt install -y awscli
+sudo apt install -y expect
 
 #phpMyAdmin削除
 rm -Rf /opt/bitnami/apps/phpmyadmin
