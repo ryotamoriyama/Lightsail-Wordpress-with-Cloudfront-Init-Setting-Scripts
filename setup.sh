@@ -33,4 +33,4 @@ sudo apt install -y awscli
 sudo apt install -y expect
 
 #Let's encryptインストール
-sudo bash /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/letsencrypt.sh ${2} ${1}
+sudo bash /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/letsencrypt.sh ${2} ${3}

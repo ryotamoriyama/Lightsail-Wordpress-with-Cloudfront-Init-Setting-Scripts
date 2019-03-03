@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #bitnami停止
-sudo /opt/bitnami/ctlscript.sh stop
+sudo /opt/bitnami/ctlscript.sh stop apache
 
 #Let's encrypt
 cd /tmp
@@ -43,4 +43,4 @@ sudo rm -Rf /var/spool/cron/crontabs/root
 sudo cp -f /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/crontab /var/spool/cron/crontabs/root
 
 #bitnami起動
-sudo /opt/bitnami/ctlscript.sh start
+sudo /opt/bitnami/ctlscript.sh start apache
