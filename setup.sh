@@ -1,8 +1,5 @@
 #!/bin/sh
 
-#phpMyAdmin削除
-rm -Rf /opt/bitnami/apps/phpmyadmin
-
 #bitnamiロゴ削除
 sudo /opt/bitnami/apps/wordpress/bnconfig --disable_banner 1
 
