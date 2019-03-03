@@ -15,6 +15,9 @@ for filename in /tmp/lego_v*_linux_amd64.tar.gz; do
   fi
 done
 
+echo $last
+echo $version
+
 tar xf "lego_${version}_linux_amd64.tar.gz"
 
 sudo mv lego /usr/local/bin/lego
