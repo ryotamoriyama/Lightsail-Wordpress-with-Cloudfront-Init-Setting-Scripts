@@ -1,1 +1,0 @@
-define('WP_HOME', 'https://hoge.com/‘);
