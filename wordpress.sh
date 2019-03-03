@@ -30,7 +30,7 @@ wp theme delete --allow-root $(wp theme list --status=inactive --field=name --al
 
 #ログインユーザー名変更
 if [ -n "$4" ]; then
-wp db query "UPDATE wp_users SET user_login = ${4} WHERE ID = 1" --allow-root
+wp db query "UPDATE wp_users SET user_login = '${4}' WHERE ID = 1" --allow-root
 fi
 
 #ログインパスワード変更
