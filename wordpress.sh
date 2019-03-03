@@ -21,5 +21,3 @@ wp plugin delete $(wp plugin list --status=inactive --field=name)
 
 #テーマ削除
 wp theme delete $(wp theme list --status=inactive --field=name)
-active=$(wp theme list --status=active --field=name)
-rm -Rf "/opt/bitnami/apps/wordpress/htdocs/wp-content/themes/${active}"
