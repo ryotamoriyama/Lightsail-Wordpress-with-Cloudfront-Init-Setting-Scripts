@@ -21,3 +21,6 @@ wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --
 
 #テーマ削除
 wp theme delete --allow-root $(wp theme list --status=inactive --field=name --allow-root)
+
+#ログインパスワード変更
+wp user update 1 --user_pass=passwd
