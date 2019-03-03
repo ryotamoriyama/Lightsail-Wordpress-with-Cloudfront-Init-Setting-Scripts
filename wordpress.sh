@@ -14,7 +14,7 @@ sed -i -e "101s|^|\nif (isset(\$_SERVER['HTTP_X_FORWARDED_PROTO']) \&\& \$_SERVE
 cd /opt/bitnami/apps/wordpress/htdocs
 
 #WordPressを最新版にアップデート
-wp core update --allow-root
+wp core update --locale=ja --allow-root
 
 #プラグイン削除
 wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --allow-root)
@@ -23,4 +23,4 @@ wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --
 wp theme delete --allow-root $(wp theme list --status=inactive --field=name --allow-root)
 
 #ログインパスワード変更
-wp user update 1 --user_pass=passwd
+wp user update 1 --user_pass=passwd --allow-root
