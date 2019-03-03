@@ -13,14 +13,11 @@ sed -i -e "101s|^|\nif (isset(\$_SERVER['HTTP_X_FORWARDED_PROTO']) \&\& \$_SERVE
 #WP CLI
 cd /opt/bitnami/apps/wordpress/htdocs
 
-#日本語ファイルインストール
-wp language core install ja --allow-root
-
 #WordPressを最新版にアップデート
 wp core update --locale=ja --allow-root
 
-#データベースをアップデート
-wp core update-db --allow-root
+#日本語ファイルインストール
+wp language core install ja --allow-root
 
 #プラグイン削除
 wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --allow-root)
