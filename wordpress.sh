@@ -43,5 +43,5 @@ fi
 
 #ログインユーザー名変更
 if [ -n "$2" ]; then
-wp db query "UPDATE wp_users SET user_login='${2}' WHERE ID=1" --allow-root
+wp db query "UPDATE wp_users SET user_login=`${2}` WHERE ID=1" --allow-root
 fi
