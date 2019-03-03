@@ -19,6 +19,9 @@ wp language core install ja --allow-root
 #WordPressを最新版にアップデート
 wp core update --locale=ja --allow-root
 
+#データベースをアップデート
+wp core update-db --allow-root
+
 #プラグイン削除
 wp plugin delete --allow-root $(wp plugin list --status=inactive --field=name --allow-root)
 
@@ -29,7 +32,7 @@ wp theme delete --allow-root $(wp theme list --status=inactive --field=name --al
 wp user update 1 --user_pass=passwd --allow-root
 
 #タイムゾーン変更
-wp option update timezone_string 'Asia/Tokyo'
+wp option update timezone_string 'Asia/Tokyo' --allow-root
 
 #言語設定
-wp option update WPLANG 'ja'
+wp option update WPLANG 'ja' --allow-root
