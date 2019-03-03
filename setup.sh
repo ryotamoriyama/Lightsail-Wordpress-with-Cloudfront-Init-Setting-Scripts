@@ -31,3 +31,6 @@ cat /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/l
 
 #bitnami起動
 sudo /opt/bitnami/ctlscript.sh start
+
+#wordpress設定
+sudo bash /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/wordpress.sh ${1}
