@@ -20,7 +20,7 @@ tar xf "lego_${version}_linux_amd64.tar.gz"
 sudo mv lego /usr/local/bin/lego
 
 #Apacheにインストール
-sudo lego --email="${3}" --domains="${1}" --path="/etc/lego" --tls run
+sudo lego --email="${3}" --domains="${2}" --path="/etc/lego" --tls run
 
 sudo mv /opt/bitnami/apache2/conf/server.crt /opt/bitnami/apache2/conf/server.crt.old
 sudo mv /opt/bitnami/apache2/conf/server.key /opt/bitnami/apache2/conf/server.key.old
@@ -34,7 +34,7 @@ sudo chmod 600 /opt/bitnami/apache2/conf/server*
 sudo touch /etc/lego/renew-certificate.sh
 sudo cat /opt/bitnami/apps/Lightsail-Wordpress-with-Cloudfront-Init-Setting-Scripts/lib/renew-certificate.sh >> /etc/lego/renew-certificate.sh
 sudo sed -i -e "s|{replace-email}|${3}|" /etc/lego/renew-certificate.sh
-sudo sed -i -e "s|{replace-domains}|${1}|" /etc/lego/renew-certificate.sh
+sudo sed -i -e "s|{replace-domains}|${2}|" /etc/lego/renew-certificate.sh
 
 #crontab登録
 cron_file=/var/spool/cron/crontabs/root
